@@ -5,6 +5,8 @@
 # fsxpired
 
 [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/fsxpired?style=flat-square)](https://www.nuget.org/packages/fsxpired/absoluteLatest)
+[![llms.txt](https://img.shields.io/badge/llms.txt-1f7a45?style=flat-square)](https://nojaf.com/fsxpired/llms.txt)
+[![llms-full.txt](https://img.shields.io/badge/llms--full.txt-1f7a45?style=flat-square)](https://nojaf.com/fsxpired/llms-full.txt)
 
 Reports which `#r "nuget: ..."` references in your F# scripts have a newer version on nuget.org,
 and updates them when asked.
