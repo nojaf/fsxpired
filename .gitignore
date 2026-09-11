@@ -1,0 +1,19 @@
+# dotnet
+bin/
+obj/
+artifacts/
+*.user
+.vs/
+.idea/
+
+# fsdocs
+output/
+.fsdocs/
+tmp/
+
+# Verify
+*.received.*
+
+# analyzers
+analysisreports/
+analysis.sarif

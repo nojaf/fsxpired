@@ -1,0 +1,30 @@
+﻿exit code: 0
+
+--- stdout ---
+fsxpired 1.2.3, .NET {version}
+working directory: {root}
+
+1. File
+  {root}/build.fsx
+  1 line
+
+2. Parse
+  parsed cleanly
+  line 1: #r "nuget: Fun.Build, 1.1.20"
+    nuget reference
+
+3. Loads
+  no #load directives
+
+4. Feed
+  fake feed answered
+
+5. References
+  Fun.Build (line 1, written as 1.1.20)
+    4 versions on nuget.org
+    latest stable 1.1.20, latest prerelease 1.2.0-beta1
+    resolves to 1.1.20, may move to 1.1.20
+    verdict: up to date, nothing newer, stable versions only
+
+
+--- stderr ---

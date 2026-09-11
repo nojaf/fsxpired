@@ -1,0 +1,13 @@
+﻿file: chain/missing.fsx
+references:
+  line 2: Fun.Build '1.1.18' at 42+6 (span ok)
+loads:
+  line 1: nowhere.fsx
+problems:
+  missing load chain/missing.fsx:1 nowhere.fsx
+directives:
+  line 1: #load "nowhere.fsx"
+    load
+  line 2: #r "nuget: Fun.Build, 1.1.18"
+    nuget reference
+diagnostics:

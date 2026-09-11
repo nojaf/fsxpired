@@ -1,0 +1,12 @@
+﻿file: nested.fsx
+references:
+  line 2: OnlyInteractive '2.0.0' at 44+5 (span ok)
+  line 8: Nested '3.0.0' at 138+5 (span ok)
+loads:
+problems:
+directives:
+  line 2: #r "nuget: OnlyInteractive, 2.0.0"
+    nuget reference
+  line 8: #r "nuget: Nested, 3.0.0"
+    nuget reference
+diagnostics:

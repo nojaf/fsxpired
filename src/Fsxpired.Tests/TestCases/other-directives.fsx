@@ -1,0 +1,5 @@
+#r "paket: nuget Fun.Build"
+#r "System.Xml"
+#r "../lib/Some.dll"
+#nowarn "0025"
+#r "nuget: Fun.Build, 1.1.18"

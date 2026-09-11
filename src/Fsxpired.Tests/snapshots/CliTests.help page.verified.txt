@@ -1,0 +1,41 @@
+﻿exit code: 0
+
+--- stdout ---
+fsxpired reports outdated #r "nuget" references in F# scripts. (1.2.3)
+
+Usage: fsxpired [command] [...flags] [...paths]
+
+Examples:
+  fsxpired                    every .fsx under the current folder
+  fsxpired build.fsx          one script, and everything it #loads
+  fsxpired -u scripts         rewrite outdated pins under scripts/
+  fsxpired --json | jq        for scripts and agents
+
+Commands:
+  doctor <file>       Walk one script through every step and report what
+                      happened at each: the directives found, the loads
+                      resolved, whether nuget.org answered, and the verdict
+                      for each reference with its reason.
+
+Flags:
+  -u, --update        Rewrite each outdated exact pin to the latest version it may move to.
+  -pre, --prerelease  Let stable pins move to, and be compared against, prereleases.
+  --json              Write the report as JSON to stdout, everything else to stderr.
+  --version           Print the version and exit.
+  -h, --help          Print this page and exit.
+
+Paths:
+  Files and folders. A folder is searched recursively for .fsx files, skipping
+  bin, obj, node_modules, .git and whatever .gitignore excludes. No paths means
+  the current folder. A script's #load chain is followed.
+
+Exit codes:
+  0  nothing outdated, or every outdated pin was rewritten
+  1  at least one reference is outdated
+  2  unexpected error: unreadable file, nuget.org unreachable, unsupported directive
+  3  a file could not be written
+
+  https://nojaf.github.io/fsxpired/
+  https://github.com/nojaf/fsxpired
+
+--- stderr ---

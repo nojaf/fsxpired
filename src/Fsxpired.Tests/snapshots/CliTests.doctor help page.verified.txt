@@ -1,0 +1,21 @@
+﻿exit code: 0
+
+--- stdout ---
+fsxpired doctor walks one script through every step and reports what happened. (1.2.3)
+
+Usage: fsxpired doctor [...flags] <file>
+
+Flags:
+  -pre, --prerelease  Let stable pins move to, and be compared against, prereleases.
+  --version           Print the version and exit.
+  -h, --help          Print this page and exit.
+
+Paths:
+  One .fsx file. A folder is refused: the answers differ per file.
+
+Exit codes:
+  0  every step ran
+  1  a step failed
+  2  the arguments were wrong
+
+--- stderr ---

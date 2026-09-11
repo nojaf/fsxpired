@@ -1,0 +1,11 @@
+﻿file: comments.fsx
+references:
+  line 4: Visible '1.0.0' at 205+5 (span ok)
+loads:
+problems:
+directives:
+  line 2: #r "../../../artifacts/bin/Fantomas.Core/release/Fantomas.Core.dll"
+    ignored: not a nuget reference
+  line 4: #r "nuget: Visible, 1.0.0"
+    nuget reference
+diagnostics:

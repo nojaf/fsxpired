@@ -1,0 +1,12 @@
+﻿file: feed.fsx
+references:
+  line 2: Fun.Build '1.1.18' at 70+6 (span ok)
+loads:
+problems:
+  feed directive feed.fsx:1 #i "nuget: https://api.nuget.org/v3/index.json"
+directives:
+  line 1: #i "nuget: https://api.nuget.org/v3/index.json"
+    problem: feed directive feed.fsx:1 #i "nuget: https://api.nuget.org/v3/index.json"
+  line 2: #r "nuget: Fun.Build, 1.1.18"
+    nuget reference
+diagnostics:

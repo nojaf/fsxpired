@@ -1,0 +1,15 @@
+﻿file: other-directives.fsx
+references:
+  line 5: Fun.Build '1.1.18' at 102+6 (span ok)
+loads:
+problems:
+directives:
+  line 1: #r "paket: nuget Fun.Build"
+    ignored: a Paket reference; use 'paket outdated'
+  line 2: #r "System.Xml"
+    ignored: not a nuget reference
+  line 3: #r "../lib/Some.dll"
+    ignored: not a nuget reference
+  line 5: #r "nuget: Fun.Build, 1.1.18"
+    nuget reference
+diagnostics:

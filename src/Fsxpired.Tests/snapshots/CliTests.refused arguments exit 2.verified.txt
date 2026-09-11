@@ -1,0 +1,6 @@
+﻿exit code: 2
+
+--- stdout ---
+
+--- stderr ---
+'--updte' is not a fsxpired flag. Did you mean '--update'? See 'fsxpired --help'.

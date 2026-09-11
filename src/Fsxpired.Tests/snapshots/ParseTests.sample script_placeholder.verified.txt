@@ -1,0 +1,9 @@
+﻿file: placeholder.fsx
+references:
+loads:
+problems:
+  invalid version placeholder.fsx:1 FSharp.Formatting '{{fsdocs-package-version}}'
+directives:
+  line 1: #r "nuget: FSharp.Formatting,{{fsdocs-package-version}}"
+    problem: invalid version placeholder.fsx:1 FSharp.Formatting '{{fsdocs-package-version}}'
+diagnostics:

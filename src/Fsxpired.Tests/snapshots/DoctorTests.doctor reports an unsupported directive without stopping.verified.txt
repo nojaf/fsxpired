@@ -1,0 +1,32 @@
+﻿exit code: 1
+
+--- stdout ---
+fsxpired 1.2.3, .NET {version}
+working directory: {root}
+
+1. File
+  {root}/build.fsx
+  2 lines
+
+2. Parse
+  parsed cleanly
+  line 1: #i "nuget: https://example.org/v3/index.json"
+    unsupported: #i "nuget: https://example.org/v3/index.json" (only nuget.org is queried)
+  line 2: #r "nuget: Fun.Build, 1.1.18"
+    nuget reference
+
+3. Loads
+  no #load directives
+
+4. Feed
+  fake feed answered
+
+5. References
+  Fun.Build (line 2, written as 1.1.18)
+    4 versions on nuget.org
+    latest stable 1.1.20, latest prerelease 1.2.0-beta1
+    resolves to 1.1.18, may move to 1.1.20
+    verdict: outdated, 1.1.20 is newer, stable versions only
+
+
+--- stderr ---

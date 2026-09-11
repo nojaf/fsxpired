@@ -1,0 +1,70 @@
+﻿exit code: 1
+
+--- stdout ---
+fsxpired 1.2.3, .NET {version}
+working directory: {root}
+
+1. File
+  {root}/build.fsx
+  11 lines
+
+2. Parse
+  parsed cleanly
+  line 2: #r "nuget: Fun.Build, 1.1.18"
+    nuget reference
+  line 3: #r "nuget: Fantomas.Core, 8.0.0-beta-001"
+    nuget reference
+  line 4: #r "nuget: Fantomas.Core, 6.*"
+    nuget reference
+  line 5: #r "nuget: Humanizer.Core"
+    nuget reference
+  line 6: #r "nuget: Nobody.Knows, 1.0.0"
+    nuget reference
+  line 7: #r "System.Xml"
+    ignored: not a nuget reference
+  line 8: #load "helper.fsx"
+    load
+  line 9: #load "Types.fs"
+    load
+  line 10: #load "nowhere.fsx"
+    load
+
+3. Loads
+  line 8: helper.fsx -> {root}/helper.fsx (followed)
+  line 9: Types.fs -> {root}/Types.fs (skipped, not a .fsx)
+  line 10: nowhere.fsx -> {root}/nowhere.fsx (missing)
+
+4. Feed
+  fake feed answered
+
+5. References
+  Fun.Build (line 2, written as 1.1.18)
+    4 versions on nuget.org
+    latest stable 1.1.20, latest prerelease 1.2.0-beta1
+    resolves to 1.1.18, may move to 1.1.20
+    verdict: outdated, 1.1.20 is newer, stable versions only
+  Fantomas.Core (line 3, written as 8.0.0-beta-001)
+    4 versions on nuget.org
+    latest stable 7.0.6, latest prerelease 8.0.0-beta-002
+    resolves to 8.0.0-beta-001, may move to 8.0.0-beta-002
+    verdict: outdated, 8.0.0-beta-002 is newer, prereleases included because the pin is one
+  Fantomas.Core (line 4, written as 6.*)
+    4 versions on nuget.org
+    latest stable 7.0.6, latest prerelease 8.0.0-beta-002
+    resolves to 6.3.16, may move to 7.0.6
+    verdict: up to date, range 6.* is a deliberate choice and is left alone
+  Humanizer.Core (line 5, written as (none))
+    2 versions on nuget.org
+    latest stable 3.0.10, latest prerelease none
+    resolves to 3.0.10, may move to 3.0.10
+    verdict: floating, no version pinned, so there is nothing to be behind
+    note: no version pinned, resolves to latest on every run
+  Nobody.Knows (line 6, written as 1.0.0)
+    0 versions on nuget.org
+    latest stable none, latest prerelease none
+    resolves to none, may move to none
+    verdict: unknown, nuget.org does not know the package
+    note: not found on nuget.org
+
+
+--- stderr ---

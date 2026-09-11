@@ -1,0 +1,6 @@
+﻿exit code: 2
+
+--- stdout ---
+
+--- stderr ---
+nuget.org could not be queried: connection refused

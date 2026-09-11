@@ -1,0 +1,51 @@
+<Project>
+    <PropertyGroup>
+        <!-- Version and package release notes come from the changelog, see Ionide.KeepAChangelog.Tasks. -->
+        <ChangelogFile>$(MSBuildThisFileDirectory)CHANGELOG.md</ChangelogFile>
+        <Authors>Florian Verdonck</Authors>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Description>Reports and updates outdated "#r nuget" references in F# scripts.</Description>
+        <Copyright>Copyright © $([System.DateTime]::UtcNow.Year)</Copyright>
+        <PackageTags>F# fsharp fsx script nuget outdated</PackageTags>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <DebugType>embedded</DebugType>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageProjectUrl>https://nojaf.github.io/fsxpired/</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/nojaf/fsxpired</RepositoryUrl>
+        <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+        <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+        <!--
+        FS0025: Incomplete pattern matches on this expression.
+        FS1182: Unused variables
+        -->
+        <WarningsAsErrors>FS0025;FS1182</WarningsAsErrors>
+        <WarnOn>1182;3390;1178;$(WarnOn)</WarnOn>
+        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+        <RestoreLockedMode>true</RestoreLockedMode>
+        <UseArtifactsOutput>true</UseArtifactsOutput>
+        <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+        <RestoreUseStaticGraphEvaluation>true</RestoreUseStaticGraphEvaluation>
+        <OtherFlags>$(OtherFlags) --strict-indentation+ --realsig+</OtherFlags>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <FsDocsLicenseLink>https://github.com/nojaf/fsxpired/blob/main/LICENSE.md</FsDocsLicenseLink>
+        <FsDocsReleaseNotesLink>https://github.com/nojaf/fsxpired/blob/main/CHANGELOG.md</FsDocsReleaseNotesLink>
+        <FsDocsLogoSource>img/logo.png</FsDocsLogoSource>
+        <FsDocsFaviconSource>img/favicon.png</FsDocsFaviconSource>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="G-Research.FSharp.Analyzers">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>build</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Ionide.Analyzers">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>

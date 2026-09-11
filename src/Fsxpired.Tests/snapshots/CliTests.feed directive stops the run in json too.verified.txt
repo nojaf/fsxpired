@@ -1,0 +1,20 @@
+﻿exit code: 2
+
+--- stdout ---
+{
+  "command": "outdated",
+  "workingDirectory": "{root}",
+  "exitCode": 2,
+  "error": "build.fsx(1): #i \"nuget: https://example.org/v3/index.json\"\n  fsxpired queries nuget.org only and does not support #i yet. If you need this, open an issue at https://github.com/nojaf/fsxpired/issues.",
+  "summary": {
+    "outdated": 0,
+    "floating": 0,
+    "unknown": 0,
+    "updated": 0,
+    "files": 0
+  },
+  "files": []
+}
+--- stderr ---
+build.fsx(1): #i "nuget: https://example.org/v3/index.json"
+  fsxpired queries nuget.org only and does not support #i yet. If you need this, open an issue at https://github.com/nojaf/fsxpired/issues.

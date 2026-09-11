@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Fsxpired/Fsxpired.fsproj" />
+    <Project Path="src/Fsxpired.Tests/Fsxpired.Tests.fsproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,6 @@
+﻿exit code: 2
+
+--- stdout ---
+
+--- stderr ---
+build.fsx(1): #load "nowhere.fsx" not found at {root}/nowhere.fsx.

@@ -1,0 +1,41 @@
+﻿file: chain/root.fsx
+references:
+  line 1: Fun.Build '1.1.18' at 22+6 (span ok)
+loads:
+  line 2: shared/helper.fsx
+  line 3: Types.fs
+  line 4: other.fsx
+problems:
+directives:
+  line 1: #r "nuget: Fun.Build, 1.1.18"
+    nuget reference
+  line 2: #load "shared/helper.fsx"
+    load
+  line 3: #load "Types.fs"
+    load
+  line 4: #load "other.fsx"
+    load
+diagnostics:
+
+file: chain/shared/helper.fsx
+references:
+  line 1: Humanizer.Core '2.14.1' at 27+6 (span ok)
+loads:
+problems:
+directives:
+  line 1: #r "nuget: Humanizer.Core, 2.14.1"
+    nuget reference
+diagnostics:
+
+file: chain/other.fsx
+references:
+  line 1: FSharp.Data '6.3.0' at 24+5 (span ok)
+loads:
+  line 2: shared/helper.fsx
+problems:
+directives:
+  line 1: #r "nuget: FSharp.Data, 6.3.0"
+    nuget reference
+  line 2: #load "shared/helper.fsx"
+    load
+diagnostics:

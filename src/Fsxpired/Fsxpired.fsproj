@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <RollForward>Major</RollForward>
+    <ToolCommandName>fsxpired</ToolCommandName>
+    <PackAsTool>true</PackAsTool>
+    <PackageId>fsxpired</PackageId>
+    <AssemblyName>fsxpired</AssemblyName>
+    <IsPackable>true</IsPackable>
+    <RootNamespace>Fsxpired</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Reference.fs" />
+    <Compile Include="Feed.fs" />
+    <Compile Include="Environment.fs" />
+    <Compile Include="Parse.fs" />
+    <Compile Include="Scripts.fs" />
+    <Compile Include="Resolve.fs" />
+    <Compile Include="Update.fs" />
+    <Compile Include="Report.fs" />
+    <Compile Include="JsonReport.fs" />
+    <Compile Include="Suggestion.fs" />
+    <Compile Include="Arguments.fs" />
+    <Compile Include="HelpPage.fs" />
+    <Compile Include="Doctor.fs" />
+    <Compile Include="Cli.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FSharp.Core" />
+    <PackageReference Include="Fantomas.FCS" />
+    <PackageReference Include="NuGet.Protocol" />
+    <PackageReference Include="NuGet.Versioning" />
+    <PackageReference Include="Spectre.Console" />
+    <PackageReference Include="System.IO.Abstractions" />
+    <PackageReference Include="Ignore" />
+  </ItemGroup>
+</Project>

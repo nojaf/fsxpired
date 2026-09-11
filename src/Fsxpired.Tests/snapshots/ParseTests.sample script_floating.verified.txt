@@ -1,0 +1,15 @@
+﻿file: floating.fsx
+references:
+  line 1: Fun.Build (floating)
+  line 2: Fable.Python (floating)
+  line 3: MSBuild.StructuredLogger (floating)
+loads:
+problems:
+directives:
+  line 1: #r "nuget: Fun.Build"
+    nuget reference
+  line 2: #r "nuget:Fable.Python"
+    nuget reference
+  line 3: #r "nuget: MSBuild.StructuredLogger,"
+    nuget reference
+diagnostics:

@@ -1,0 +1,133 @@
+/* The one accent the tool uses on the terminal, emerald, carried through the whole site.
+   Every raw value lives in the palette block; the theme variables below only combine them. The
+   variables are the ones the default fsdocs theme exposes; the few rules at the end cover what a
+   variable cannot reach. */
+:root {
+  /* Palette. Emerald from the page tint up to the header, plus the neutrals and the one warm
+     tone that keeps strings apart from keywords in code. */
+  --emerald-25: #f9fdfa;
+  --emerald-50: #eefaf3;
+  --emerald-100: #d9f3e3;
+  --emerald-200: #b3e7c8;
+  --emerald-300: #8fe0b1;
+  --emerald-400: #7fb894;
+  --emerald-500: #50c878;
+  --emerald-600: #2f9e5b;
+  --emerald-700: #1f7a45;
+  --emerald-800: #175a34;
+  --emerald-900: #0f3d24;
+  --emerald-950: #08261a;
+  --emerald-975: #10221a;
+  --ink: #0b1712;
+  --ink-soft: #14231b;
+  --ink-muted: #5d7a68;
+  --paper: #ffffff;
+  --paper-soft: #e6f2ea;
+  --amber-400: #e2b45b;
+  --amber-700: #8a5a12;
+
+  /* Sizes. The header grows with the logo. */
+  --logo-size: 60px;
+  --header-height: calc(var(--logo-size) + 2 * var(--spacing-300));
+
+  --primary: light-dark(var(--emerald-600), var(--emerald-500));
+
+  /* The header is the same deep emerald in both modes: it is the brand, not the page. */
+  --header-background: var(--emerald-900);
+  --header-border: var(--emerald-800);
+  --header-link-color: var(--emerald-100);
+  --header-brand-text-transform: none;
+
+  --background: light-dark(var(--emerald-25), var(--ink));
+  --panel-background: light-dark(var(--emerald-50), var(--emerald-950));
+  --panel-border: light-dark(var(--emerald-200), var(--emerald-800));
+  --aside-background: var(--panel-background);
+  --page-menu-background-color: var(--panel-background);
+  --mobile-menu-background: var(--panel-background);
+  --menu-item-hover-background: light-dark(var(--emerald-100), var(--emerald-900));
+  --nav-category: light-dark(var(--emerald-700), var(--emerald-300));
+  --nav-item-active-border-color: var(--primary);
+  --page-menu-background-hover-border-color: var(--primary);
+  --on-this-page-color: light-dark(var(--emerald-700), var(--emerald-300));
+
+  --heading-color: light-dark(var(--emerald-900), var(--emerald-100));
+  --text-color: light-dark(var(--ink-soft), var(--paper-soft));
+  --text-hover: light-dark(var(--emerald-700), var(--emerald-300));
+  --link-color: light-dark(var(--emerald-700), var(--emerald-300));
+  --link-hover: var(--emerald-500);
+
+  --code-background: light-dark(var(--paper), var(--emerald-975));
+  --code-color: light-dark(var(--emerald-900), var(--paper-soft));
+  --code-fence-border-color: light-dark(var(--emerald-200), var(--emerald-800));
+  --code-comment-color: light-dark(var(--ink-muted), var(--emerald-400));
+  --code-keywords-color: light-dark(var(--emerald-700), var(--emerald-300));
+  --code-strings-color: light-dark(var(--amber-700), var(--amber-400));
+
+  --search-background: light-dark(var(--emerald-100), var(--emerald-950));
+  --doc-tip-background: var(--panel-background);
+  --blockquote-background-color: var(--panel-background);
+  --scrollbar-thumb-background: var(--emerald-700);
+  --scrollbar-track-background: var(--emerald-950);
+  --scrollbar-track-border: var(--emerald-900);
+}
+
+/* The brand in the header reads white on the emerald bar, whatever the page theme. */
+header a strong {
+  color: var(--paper);
+  font-size: var(--font-400);
+}
+
+header .start a img {
+  height: var(--logo-size);
+}
+
+header svg {
+  fill: var(--emerald-100);
+}
+
+/* Headings carry a short emerald rule, the way the terminal help page underlines nothing but
+   colours the title. */
+main h1 {
+  padding-bottom: var(--spacing-100);
+  border-bottom: 3px solid var(--primary);
+}
+
+main h2 {
+  margin-top: var(--spacing-600);
+}
+
+main h2::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 0.8em;
+  margin-right: var(--spacing-200);
+  border-radius: 3px;
+  background: var(--primary);
+  vertical-align: -0.05em;
+}
+
+/* Code blocks get the emerald edge the tool's own tables have. */
+table.pre {
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+}
+
+/* Markdown tables, such as the exit codes, pick up the panel colours. */
+main table:not(.pre) thead {
+  background: var(--panel-background);
+  color: var(--heading-color);
+}
+
+main table:not(.pre) th,
+main table:not(.pre) td {
+  border-color: var(--panel-border);
+}
+
+.mermaid {
+  margin: 1rem auto;
+  & svg {
+    display: block;
+    margin: 0 auto;
+  }
+}

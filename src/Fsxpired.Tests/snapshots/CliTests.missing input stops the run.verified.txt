@@ -1,0 +1,6 @@
+﻿exit code: 2
+
+--- stdout ---
+
+--- stderr ---
+nowhere.fsx: not found.

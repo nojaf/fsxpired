@@ -1,0 +1,12 @@
+﻿exit code: 1
+
+--- stdout ---
+fsxpired 1.2.3, .NET {version}
+working directory: {root}
+
+1. File
+  {root}
+  a folder; doctor takes one file
+
+
+--- stderr ---

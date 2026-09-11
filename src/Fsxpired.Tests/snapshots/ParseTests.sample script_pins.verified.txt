@@ -1,0 +1,21 @@
+﻿file: pins.fsx
+references:
+  line 1: Fun.Build '1.1.18' at 22+6 (span ok)
+  line 2: Newtonsoft.Json '13.0.1' at 57+6 (span ok)
+  line 3: FSharp.Data '6.3.0' at 96+5 (span ok)
+  line 4: Humanizer.Core '2.14.1' at 133+6 (span ok)
+  line 5: Fantomas.Core '8.0.0-beta-001' at 167+14 (span ok)
+loads:
+problems:
+directives:
+  line 1: #r "nuget: Fun.Build, 1.1.18"
+    nuget reference
+  line 2: #r "nuget:Newtonsoft.Json, 13.0.1"
+    nuget reference
+  line 3: #r   "nuget:   FSharp.Data ,   6.3.0  "
+    nuget reference
+  line 4: #r @"nuget: Humanizer.Core, 2.14.1"
+    nuget reference
+  line 5: #r "nuget: Fantomas.Core, 8.0.0-beta-001"
+    nuget reference
+diagnostics:

@@ -1,0 +1,7 @@
+﻿exit code: 2
+
+--- stdout ---
+
+--- stderr ---
+docs/page.fsx(1): '{{fsdocs-package-version}}' is not a NuGet version for FSharp.Formatting.
+  fsxpired does not know what to compare it against. If this is a form FSI accepts, open an issue at https://github.com/nojaf/fsxpired/issues.

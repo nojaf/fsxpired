@@ -1,0 +1,101 @@
+﻿exit code: 0
+
+--- stdout ---
+{
+  "command": "update",
+  "workingDirectory": "{root}",
+  "exitCode": 0,
+  "error": null,
+  "summary": {
+    "outdated": 0,
+    "floating": 1,
+    "unknown": 0,
+    "updated": 4,
+    "files": 2
+  },
+  "files": [
+    {
+      "path": "build.fsx",
+      "references": [
+        {
+          "id": "Fun.Build",
+          "line": 1,
+          "version": "1.1.18",
+          "resolved": "1.1.18",
+          "latest": "1.1.20",
+          "status": "updated",
+          "note": null
+        },
+        {
+          "id": "Newtonsoft.Json",
+          "line": 2,
+          "version": "13.0.1",
+          "resolved": "13.0.1",
+          "latest": "13.0.4",
+          "status": "updated",
+          "note": null
+        },
+        {
+          "id": "Humanizer.Core",
+          "line": 3,
+          "version": "2.14.1",
+          "resolved": "2.14.1",
+          "latest": "3.0.10",
+          "status": "updated",
+          "note": null
+        },
+        {
+          "id": "FSharp.Data",
+          "line": 4,
+          "version": "6.3.0",
+          "resolved": "6.3.0",
+          "latest": "6.3.0",
+          "status": "current",
+          "note": null
+        },
+        {
+          "id": "Fantomas.Core",
+          "line": 5,
+          "version": "6.*",
+          "resolved": "6.3.16",
+          "latest": "7.0.6",
+          "status": "current",
+          "note": null
+        },
+        {
+          "id": "Suave",
+          "line": 6,
+          "version": null,
+          "resolved": "2.6.0",
+          "latest": "2.6.0",
+          "status": "floating",
+          "note": "no version pinned, resolves to latest on every run"
+        }
+      ]
+    },
+    {
+      "path": "helper.fsx",
+      "references": [
+        {
+          "id": "Fantomas.Core",
+          "line": 1,
+          "version": "8.0.0-beta-001",
+          "resolved": "8.0.0-beta-001",
+          "latest": "8.0.0-beta-002",
+          "status": "updated",
+          "note": null
+        },
+        {
+          "id": "Suave",
+          "line": 2,
+          "version": "2.6.0",
+          "resolved": "2.6.0",
+          "latest": "2.6.0",
+          "status": "current",
+          "note": null
+        }
+      ]
+    }
+  ]
+}
+--- stderr ---

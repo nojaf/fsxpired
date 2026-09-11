@@ -1,0 +1,6 @@
+﻿exit code: 0
+
+--- stdout ---
+no #r "nuget" references found
+
+--- stderr ---
