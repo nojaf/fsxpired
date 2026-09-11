@@ -9,6 +9,9 @@ env:
 jobs:
   build:
     strategy:
+      # One platform failing should not hide whether the other two are fine, which is most of
+      # the reason to run three of them.
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     runs-on: ${{ matrix.os }}
@@ -22,12 +25,29 @@ jobs:
         cache-dependency-path: Directory.Packages.props
     - name: Build
       run: dotnet fsi build.fsx
-    - name: Documentation
+    - name: Upload documentation
       if: matrix.os == 'ubuntu-latest' && github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v4
+      uses: actions/upload-pages-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./output
+        path: ./output
+
+  # Serving the site is its own job because GitHub deploys Pages from an artifact rather than from
+  # a branch. Only this job needs the Pages permissions, so the build keeps the read-only default.
+  deploy-docs:
+    name: Publish documentation
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   analyze:
     name: Analyze

@@ -13,7 +13,7 @@
         <PackageIcon>icon.png</PackageIcon>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageProjectUrl>https://nojaf.github.io/fsxpired/</PackageProjectUrl>
+        <PackageProjectUrl>https://nojaf.com/fsxpired/</PackageProjectUrl>
         <RepositoryUrl>https://github.com/nojaf/fsxpired</RepositoryUrl>
         <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
         <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>

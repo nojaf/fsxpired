@@ -18,4 +18,4 @@ fsxpired --json     # for scripts and agents
 Exit codes: 0 nothing outdated, 1 something is outdated, 2 unexpected error, 3 a file could not
 be written.
 
-See the [documentation](https://nojaf.github.io/fsxpired/) for the details.
+See the [documentation](https://nojaf.com/fsxpired/) for the details.

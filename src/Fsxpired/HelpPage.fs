@@ -71,7 +71,7 @@ let render (invocation: string) (version: string) (command: Command) : string li
     let tool = muted invocation
     let doctorName = flagName "doctor"
     let file = placeholder "<file>"
-    let site = link "https://nojaf.github.io/fsxpired/"
+    let site = link "https://nojaf.com/fsxpired/"
     let repository = link "https://github.com/nojaf/fsxpired"
 
     match command with

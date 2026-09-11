@@ -35,7 +35,7 @@ Exit codes:
   2  unexpected error: unreadable file, nuget.org unreachable, unsupported directive
   3  a file could not be written
 
-  https://nojaf.github.io/fsxpired/
+  https://nojaf.com/fsxpired/
   https://github.com/nojaf/fsxpired
 
 --- stderr ---
