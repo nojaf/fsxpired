@@ -32,6 +32,11 @@ jobs:
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
+    # upload-sarif writes a code scanning report, which the default read-only token cannot do.
+    permissions:
+      security-events: write
+      contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v5
       - name: Setup .NET

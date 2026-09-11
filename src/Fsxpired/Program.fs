@@ -49,6 +49,10 @@ let private console () =
     if redirected then
         console.Profile.Width <- 160
         console.Profile.Capabilities.Unicode <- false
+        // Spectre's environment detection overrides `AnsiSupport.No` when it sees a CI variable,
+        // which puts bold and dim escape codes into a stream nothing will render them. The
+        // capability is the last word, so it is set here rather than left to the settings.
+        console.Profile.Capabilities.Ansi <- false
 
     console
 

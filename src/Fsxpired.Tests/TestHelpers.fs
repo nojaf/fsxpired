@@ -86,6 +86,11 @@ let private console (out: TextWriter) =
         )
 
     let console = AnsiConsole.Create settings
+    // Every capability the snapshots depend on is pinned here rather than left to the settings
+    // above. Spectre detects the environment when it builds the profile, and a CI variable makes
+    // it override `AnsiSupport.No` and emit bold and dim codes, so a run on a build agent would
+    // not match a run on a laptop.
+    console.Profile.Capabilities.Ansi <- false
     console.Profile.Width <- 200
     console.Profile.Capabilities.Unicode <- true
     console
