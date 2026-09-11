@@ -4,6 +4,8 @@
 
 # fsxpired
 
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/fsxpired?style=flat-square)](https://www.nuget.org/packages/fsxpired/absoluteLatest)
+
 Reports which `#r "nuget: ..."` references in your F# scripts have a newer version on nuget.org,
 and updates them when asked.
 

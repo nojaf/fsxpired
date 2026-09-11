@@ -1,0 +1,18 @@
+version: 2
+
+# Both ecosystems feed one group, so a month's worth of action and package bumps arrives as a
+# single pull request rather than one per ecosystem. The group owns the schedule, which is why the
+# entries below do not carry one.
+multi-ecosystem-groups:
+  all:
+    schedule:
+      interval: monthly
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    multi-ecosystem-group: all
+
+  - package-ecosystem: nuget
+    directory: /
+    multi-ecosystem-group: all
