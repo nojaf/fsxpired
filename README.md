@@ -12,11 +12,12 @@ Reports which `#r "nuget: ..."` references in your F# scripts have a newer versi
 and updates them when asked.
 
 ```
-dotnet tool install -g fsxpired
-fsxpired            # every .fsx under the current folder
-fsxpired build.fsx  # one script, and everything it #loads
-fsxpired -u         # rewrite outdated pins in place
-fsxpired --json     # for scripts and agents
+dnx fsxpired                     # run it once, nothing installed
+dotnet tool install -g fsxpired  # keep it around
+fsxpired                         # every .fsx under the current folder
+fsxpired build.fsx               # one script, and everything it #loads
+fsxpired -u                      # rewrite outdated pins in place
+fsxpired --json                  # for scripts and agents
 ```
 
 Exit codes: 0 nothing outdated, 1 something is outdated, 2 unexpected error, 3 a file could not

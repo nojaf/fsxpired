@@ -12,6 +12,14 @@ and updates them when asked.
 
 ## Install
 
+Run it once without installing anything (needs the .NET 10 SDK, which ships `dnx`):
+
+```shell
+dnx fsxpired
+```
+
+Or keep it around as a global tool:
+
 ```shell
 dotnet tool install -g fsxpired
 ```
